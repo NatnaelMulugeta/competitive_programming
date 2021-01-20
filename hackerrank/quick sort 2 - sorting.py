@@ -11,6 +11,11 @@ def quickSort(arr):
         else:
             equal.append(arr[i])
 
-    return quickSort(left) + equal + quickSort(right)
+    result = quickSort(left) + equal + quickSort(right)
+    print(' '.join([str(x) for x in result]))
+    return result
 
-print(quickSort([4,5,3,7,2]))
+
+num = input().strip().split()
+lst = [int(x) for x in input().strip().split()]
+quickSort(lst)

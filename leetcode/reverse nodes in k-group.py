@@ -14,7 +14,6 @@ class Solution:
 
         prev = head
         current = head.next
-        i = 1
         for i in range(1, k):
             if current == None:
                 break

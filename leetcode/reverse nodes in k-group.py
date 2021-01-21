@@ -6,7 +6,7 @@ class ListNode:
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         node = head
-        for i in range(k):
+        for _ in range(k):
             if node:
                 node = node.next
             else:
@@ -14,7 +14,7 @@ class Solution:
 
         prev = head
         current = head.next
-        for i in range(1, k):
+        for _ in range(1, k):
             if current == None:
                 break
             nxt = current.next

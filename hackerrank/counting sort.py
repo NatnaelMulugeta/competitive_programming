@@ -8,7 +8,7 @@ def countingSort(lst):
 
     x = 0
     for i in range(max(lst)+1):
-        for j in range(count[i]):
+        for _ in range(count[i]):
             result[x] = i
             x += 1
 

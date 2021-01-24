@@ -1,5 +1,5 @@
 class Solution:
-    def minOperations(self, logs: List[str]) -> int:
+    def minOperations(self, logs: [str]) -> int:
         ops = 0
         for log in logs:
             if log == "../":

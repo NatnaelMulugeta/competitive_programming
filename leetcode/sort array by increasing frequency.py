@@ -1,23 +1,10 @@
 from collections import Counter
 class Solution:
-    def frequencySort(self, nums: [int]) -> [int]:
+    def frequencySort(self, nums: List[int]) -> List[int]:
         count = Counter(nums)
-        result = []
-        while count:
-            key = nums[0]
-            val = count[nums[0]]
-            for k, v in count.items():
-                if v < val:
-                    val, key = v, k
-                elif v == val:
-                    if k > key:
-                        key = k
-            for _ in range(val):
-                result.append(key)
-                nums.remove(key)
-            del count[key]
-        
-        return result
+        nums.sort(key = lambda num: (count[num], -num))
+        return nums
+
         
         
 obj = Solution()

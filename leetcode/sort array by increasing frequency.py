@@ -1,6 +1,6 @@
 from collections import Counter
 class Solution:
-    def frequencySort(self, nums: List[int]) -> List[int]:
+    def frequencySort(self, nums: [int]) -> [int]:
         count = Counter(nums)
         nums.sort(key = lambda num: (count[num], -num))
         return nums

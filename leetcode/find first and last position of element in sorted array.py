@@ -1,6 +1,6 @@
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
-        def searchBinary(nums: List[int], target: int, left: int, right: int, start: bool) -> int:
+    def searchRange(self, nums: [int], target: int) -> [int]:
+        def searchBinary(nums: [int], target: int, left: int, right: int, start: bool) -> int:
             while left <= right:
                 mid = left + (right - left)//2
                 if nums[mid] == target:

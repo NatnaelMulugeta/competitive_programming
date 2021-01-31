@@ -1,11 +1,11 @@
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+         self.val = val
+         self.left = left
+         self.right = right
 class Solution:
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
+    def preorderTraversal(self, root: TreeNode) -> [int]:
         if not root:
             return
         result = []
@@ -21,14 +21,16 @@ class Solution:
         return result
            
         # recursive function
-        '''
+        
+class SolutionTwo:    
+    def preorderTraversal(self, root: TreeNode) -> [int]:
         lst = []
         self.helper(root, lst)
         return lst
-    def helper(self, root: TreeNode, lst: List[int]):
+    def helper(self, root: TreeNode, lst: [int]):
         if not root:
             return
         lst.append(root.val)
         self.helper(root.left, lst)
-        self.helper(root.right, lst)
-        '''
+        self.helper(root.right, lst)       
+        

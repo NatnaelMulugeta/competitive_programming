@@ -1,5 +1,6 @@
+import math
 class Solution:
-    def smallestDivisor(self, nums: List[int], threshold: int) -> int:
+    def smallestDivisor(self, nums: [int], threshold: int) -> int:
         left, right = 1, max(nums)
         while left < right:
             d = left + (right-left)//2
@@ -10,4 +11,3 @@ class Solution:
                 right = d
                 
         return right
-        

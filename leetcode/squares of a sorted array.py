@@ -1,7 +1,7 @@
 import bisect
 import heapq
 class Solution:
-    def sortedSquares(self, nums: List[int]) -> List[int]:
+    def sortedSquares(self, nums: [int]) -> [int]:
         result = []
         
         for i in range(len(nums)):

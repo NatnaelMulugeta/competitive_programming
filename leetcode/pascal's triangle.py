@@ -1,5 +1,5 @@
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(self, numRows: int) -> [[int]]:
         result = []
         
         for row in range(numRows):

@@ -1,5 +1,5 @@
 class Solution:
-    def maxDistance(self, grid: List[List[int]]) -> int:
+    def maxDistance(self, grid: [[int]]) -> int:
         rows, cols = len(grid), len(grid[0])
         moves = [(0,1), (1,0), (0,-1), (-1,0)]
         

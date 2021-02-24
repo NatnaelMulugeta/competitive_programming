@@ -12,6 +12,6 @@ class Solution:
             if len(val) > 1:
                 for i in range(len(val)-1):
                     if val[i+1] - val[i] <= k:
-                        return True         
+                        return True
                         
         return False

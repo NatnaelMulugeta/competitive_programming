@@ -1,15 +1,16 @@
-def intersection(nums1, nums2):
-    nums1 = list(dict.fromkeys(nums1))
-    nums2 = list(dict.fromkeys(nums2))
-
-    if len(nums2) < len(nums1):
-        nums1, nums2 = nums2, nums1
-
-    result = []
-    for i in nums1:
-        if i in nums2:
-            result.append(i)
-
-    return result
-
-print(intersection([1,2.1,1,8,5], [3,1,8,6,6]))
+class Solution:
+    def intersection(self, nums1: [int], nums2: [int]) -> [int]:
+        result = set()
+                
+        if len(nums2) < len(nums1):
+            nums1, nums2 = nums2, nums1
+        
+        set1 = set(nums1)
+        set2 = set(nums2)
+        
+        for num in nums1:
+            if num in set1 and num in set2:
+                result.add(num)
+                
+        return list(result)
+        

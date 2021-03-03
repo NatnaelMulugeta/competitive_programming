@@ -18,7 +18,7 @@ class Solution:
                     visited.add((i,j))
        
         while queue:
-            curr = row, col = queue.popleft()
+            row, col = queue.popleft()
             for move in moves:
                 new = row + move[0], col + move[1]
                 

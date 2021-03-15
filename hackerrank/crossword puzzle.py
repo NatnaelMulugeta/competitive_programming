@@ -5,43 +5,43 @@ import re
 import sys
 
 def get_space(crossword, word):
-    for i in range(10):
-        for j in range(10 - len(word) + 1):
+    for r in range(10):
+        for c in range(10 - len(word) + 1):
             good = True
-            for k in range(len(word)):
-                if crossword[i][j + k] not in ['-', word[k]]:
+            for w in range(len(word)):
+                if crossword[r][c + w] not in ['-', word[w]]:
                     good = False
                     break
             if good:
-                yield (i, j, 0)
+                yield (r, c, 0)
     
-    for i in range(10 - len(word) + 1):
-        for j in range(10):
+    for r in range(10 - len(word) + 1):
+        for c in range(10):
             good = True
-            for k in range(len(word)):
-                if crossword[i + k][j] not in ['-', word[k]]:
+            for w in range(len(word)):
+                if crossword[r + w][c] not in ['-', word[w]]:
                     good = False
                     break
             if good:
-                yield (i, j, 1)
+                yield (r, c, 1)
 
 def write(crossword, word, spot):
-    i, j, polar = spot
+    r, c, polar = spot
     if polar == 0:
-        for k in range(len(word)):
-            crossword[i][j + k] = word[k]
+        for w in range(len(word)):
+            crossword[r][c + w] = word[w]
     else:
-        for k in range(len(word)):
-            crossword[i + k][j] = word[k]
+        for w in range(len(word)):
+            crossword[r + w][c] = word[w]
             
 def ctl_z(crossword, word, spot):
-    i, j, polar = spot
+    r, c, polar = spot
     if polar == 0:
-        for k in range(len(word)):
-            crossword[i][j + k] = '-'
+        for w in range(len(word)):
+            crossword[r][c + w] = '-'
     else:
-        for k in range(len(word)):
-            crossword[i + k][j] = '-'
+        for w in range(len(word)):
+            crossword[r + w][c] = '-'
             
 def crosswordPuzzle(crossword, words):
     if len(words) == 0:
@@ -64,11 +64,11 @@ def crosswordPuzzle(crossword, words):
     words.append(word)
 
     
-if __name__ == "__main__":
-    crossword = []
-    for _ in range(10):
-        crossword.append(list(input()))
-    words = str(input()).split(";")
+# if __name__ == "__main__":
+#     crossword = []
+#     for _ in range(10):
+#         crossword.append(list(input()))
+#     words = str(input()).split(";")
     
-    crosswordPuzzle(crossword, words)
+#     crosswordPuzzle(crossword, words)
 
